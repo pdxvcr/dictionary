@@ -1,0 +1,44 @@
+#HOW TO USE DICTIONARIES
+wort='unabhaengigkeitserklaerungen'
+d=dictionary()
+for i in word:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]=d[i]+1
+print(d)
+
+#HOW TO CONVERT FILE CONTENS INTO THE DICTIONARY
+filename = input('Enter the file name: ')
+try:
+    fhand = open(filename)
+except:
+    print('File cannot be openned: ', filename)
+    exit()
+
+
+print(dir(fhand))
+
+d = dictionary()
+for line in fhand:
+    print(dir(line))
+    words = line.split()
+    for i in words:
+        if i not in d:
+            d[i] = 1
+        else:
+            d[i] = d[i]+ 1
+print(d)
+
+#HOW TO USE LOOPS WITH DICTIONARIES
+dictionary = {'harddrive':1, 'laptop':15, 'chip':67}
+for key in dictionary:
+    if dictictionary[key]>12:
+        print(key, dictionary[key])
+
+#HOW TO SORT DICTIONARY CONTENCE IN ALPHABETIC ORDER
+lst = list(dictionary.keys())
+print(list)
+lst.sort()
+for key in lst:
+    print(key, dictionary[key])
